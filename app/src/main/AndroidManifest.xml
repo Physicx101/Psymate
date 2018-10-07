@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.bogi.psymate">
+    package="com.example.bogi.psymate">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -14,27 +14,28 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".OnboardingActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".MainActivity"
-            android:windowSoftInputMode="adjustNothing">
-        </activity>
-        <activity android:name=".ClinicActivity">
-        </activity>
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".ClinicActivity" />
         <activity
             android:name=".AddDiaryActivity"
-            android:windowSoftInputMode="adjustResize">
-        </activity>
-        <activity android:name=".DrawerActivity">
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MapsActivity">
-        </activity>
+        <activity android:name=".MapsActivity" />
+        <activity android:name=".PerjanjianActivity" />
+        <activity android:name=".DrawerActivity" />
+        <activity android:name=".IntroActivity" />
+        <activity android:name=".ArtikelActivity" />
+        <activity android:name=".KomunitasActivity" />
+        <activity android:name=".ChatbotActivity"></activity>
     </application>
 
 </manifest>

@@ -92,6 +92,7 @@ public class DrawerActivity extends AppCompatActivity
                         fm.beginTransaction().replace(R.id.main_content, new ProfileFragment()).commit();
                         break;
 
+
                 }
 
                 toolbar.setTitle(item.getTitle());

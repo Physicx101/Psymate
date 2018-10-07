@@ -25,8 +25,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapsActivity extends AppCompatActivity
-    implements NavigationView.OnNavigationItemSelectedListener, DummyFragment.OnFragmentInteractionListener {
+public class MapsActivity extends AppCompatActivity {
 
         private Toolbar toolbar;
         private ViewPager view_pager;
@@ -35,18 +34,12 @@ public class MapsActivity extends AppCompatActivity
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                Window window = getWindow();
-                Drawable background = getResources().getDrawable(R.drawable.gradient);
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(getResources().getColor(android.R.color.transparent));
-                window.setBackgroundDrawable(background);
-            }
+
             setContentView(R.layout.activity_maps);
 
 
             initToolbar();
-            initNavigationMenu();
+
             initComponent();
         }
 
@@ -57,26 +50,6 @@ public class MapsActivity extends AppCompatActivity
             toolbar.setTitleTextAppearance(this, R.style.GothamMediumTextAppearance);
         }
 
-        private void initNavigationMenu() {
-            NavigationView nav_view = (NavigationView) findViewById(R.id.nav_view);
-            final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
-                public void onDrawerOpened(View drawerView) {
-                    super.onDrawerOpened(drawerView);
-                }
-            };
-            drawer.setDrawerListener(toggle);
-            toggle.syncState();
-            nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(final MenuItem item) {
-                    Toast.makeText(getApplicationContext(), item.getTitle() + " Selected", Toast.LENGTH_SHORT).show();
-                    toolbar.setTitle(item.getTitle());
-                    drawer.closeDrawers();
-                    return true;
-                }
-            });
-        }
 
 
     private void initComponent() {
@@ -138,15 +111,7 @@ public class MapsActivity extends AppCompatActivity
             return super.onOptionsItemSelected(item);
         }
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            return false;
-        }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
 }
 
 

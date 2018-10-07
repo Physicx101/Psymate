@@ -40,16 +40,19 @@
             android:id="@+id/home_perjanjian"
             android:layout_width="match_parent"
             android:alpha="0"
+            android:layout_weight="1"
             android:layout_height="match_parent" />
         <ImageButton
             android:id="@+id/home_chatbot"
             android:layout_width="match_parent"
             android:alpha="0"
+            android:layout_weight="1"
             android:layout_height="match_parent" />
         <ImageButton
             android:id="@+id/home_event"
             android:layout_width="match_parent"
             android:alpha="0"
+            android:layout_weight="1"
             android:layout_height="match_parent" />
     </LinearLayout>
 </LinearLayout>

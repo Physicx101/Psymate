@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bogi.psymate.ChatActivity">
+    tools:context="com.example.bogi.psymate.ChatbotActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -28,7 +28,7 @@
 
 
 
-    <android.support.v7.widget.RecyclerView
+    <LinearLayout
         android:id="@+id/recyclerView"
         android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
@@ -36,7 +36,8 @@
         android:paddingTop="10dp"
         android:paddingBottom="50dp"
         android:clipToPadding="false"
-        android:background="#f4f6f7"
+        android:orientation="vertical"
+        android:background="@drawable/chat"
         android:layout_marginBottom="8dp"/>
 
 

@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements ProfileFragment.O
                     case R.id.navigation_profile:
                         selectedFragment = ProfileFragment.newInstance();
                         break;
+
                 }
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.frame_layout, selectedFragment);

@@ -160,22 +160,22 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         if (view == btArtikel){
-
+            startActivity(new Intent(getActivity(),ArtikelActivity.class));
         }
         if (view == btChatbot){
-
+            startActivity(new Intent(getActivity(),ChatbotActivity.class));
         }
         if (view == btEvent){
 
         }
         if (view == btKomunitas){
-
+            startActivity(new Intent(getActivity(),KomunitasActivity.class));
         }
         if (view == btLokasi){
-
+            startActivity(new Intent(getActivity(),MapsActivity.class));
         }
         if (view == btPerjanjian){
-
+            startActivity(new Intent(getActivity(),PerjanjianActivity.class));
         }
     }
 }
