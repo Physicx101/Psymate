@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <integer-array name="clinic_images">
+        <item>@drawable/hos</item>
+        <item>@drawable/hos2</item>
+        <item>@drawable/hos3</item>
+        <item>@drawable/hos4</item>
+        <item>@drawable/hos5</item>
+    </integer-array>
+
+    <string-array name="clinic_ratings">
+        <item>4.2</item>
+        <item>4.3</item>
+        <item>4.3</item>
+        <item>4.4</item>
+        <item>4.1</item>
+    </string-array>
+
+    <string-array name="clinic_names">
+        <item>GMC UGM</item>
+        <item>UKP UGM</item>
+        <item>RS JIH</item>
+        <item>RS Sardjito</item>
+        <item>Bina Asih Psikologi</item>
+    </string-array>
+
+    <string-array name="clinic_address">
+        <item>Jl. Kaliurang KM. 10</item>
+        <item>Jl. Ring Road Utara No. 160</item>
+        <item>Jl. Humaniora, Bulaksumur</item>
+        <item>Jl. Acasia, Sleman</item>
+        <item>Jl. Pandega Marta</item>
+    </string-array>
+
+    <integer-array name="people_images">
+        <item>@drawable/photo_male_1</item>
+        <item>@drawable/photo_male_2</item>
+        <item>@drawable/photo_female_3</item>
+        <item>@drawable/photo_female_5</item>
+        <item>@drawable/photo_female_6</item>
+    </integer-array>
+
+    <string-array name="people_names">
+        <item>Anderson Thomas</item>
+        <item>Adams Green</item>
+        <item>Laura Michelle</item>
+        <item>Betty L</item>
+        <item>Mary Jackson</item>
+    </string-array>
+
+
+</resources>

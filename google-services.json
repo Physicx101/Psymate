@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "938059896175",
+    "firebase_url": "https://psymate-624a0.firebaseio.com",
+    "project_id": "psymate-624a0",
+    "storage_bucket": "psymate-624a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938059896175:android:1fc3daf344016a4e",
+        "android_client_info": {
+          "package_name": "com.example.bogi.psymate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938059896175-qsb381ht2u9q5qd87as72optskhr9e51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2AV-to6CFo7PJ3jkpVAEM7wh2x3uJOZA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

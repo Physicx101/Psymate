@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginEnd="@dimen/spacing_large"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:id="@+id/lyt_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/image"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:src="@drawable/hos3"
+            app:civ_border_width="1dp"/>
+
+        <View
+            android:layout_width="@dimen/spacing_medium"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/spacing_middle"
+                android:paddingTop="@dimen/spacing_middle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:fontFamily="@font/gotham_rounded_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_middle"
+                        android:layout_marginRight="@dimen/spacing_middle"
+                        android:text="UKP UGM"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimary"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:orientation="horizontal">
+
+
+
+                    <android.support.v7.widget.AppCompatRatingBar
+                        style="@style/Yellow.Small.AppCompatRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:clickable="false"
+                        android:layout_marginEnd="@dimen/spacing_small"
+                        android:numStars="5"
+                        android:rating="4.5"
+                        android:stepSize="1"
+                        android:theme="@style/Yellow.Small.AppCompatRatingBar"/>
+
+                    <TextView
+                        android:id="@+id/rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:text="4.5"
+                        android:textColor="@color/grey_60"
+                        android:fontFamily="@font/gotham_rounded_book"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <TextView
+                        android:id="@+id/ratingCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:text="(18)"
+                        android:fontFamily="@font/gotham_rounded_book"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/grey_60"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:src="@drawable/ic_near_me"
+                        android:tint="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_middle"
+                        android:layout_marginRight="@dimen/spacing_middle"
+                        android:maxLines="1"
+                        android:text="0.7 km"
+                        android:fontFamily="@font/gotham_rounded_book"
+                        android:textSize="12sp"
+                        android:textColor="@color/grey_60"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/spacing_large"
+                    android:background="?attr/dividerHorizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_middle"
+                        android:layout_marginRight="@dimen/spacing_middle"
+                        android:maxLines="1"
+                        android:fontFamily="@font/gotham_rounded_book"
+                        android:text="Jl. Humaniora, Bulaksumur"
+                        android:textSize="12sp"
+                        android:textColor="@color/grey_60"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_middle"
+                        android:layout_marginRight="@dimen/spacing_middle"
+                        android:maxLines="1"
+                        android:text="0857-5916-1851"
+                        android:fontFamily="@font/gotham_rounded_book"
+                        android:textSize="12sp"
+                        android:textColor="@color/grey_40"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_middle"
+                        android:layout_marginRight="@dimen/spacing_middle"
+                        android:maxLines="1"
+                        android:fontFamily="@font/gotham_rounded_book"
+                        android:text="Opens Mon - Fri, 8 AM - 4 PM"
+                        android:textSize="12sp"
+                        android:textColor="@color/grey_60"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:orientation="horizontal">
+
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:layout_width="@dimen/spacing_xmlarge"
+                        android:layout_height="@dimen/spacing_xmlarge"
+                        android:layout_marginEnd="@dimen/spacing_large"
+                        android:clickable="true"
+                        android:tint="@android:color/white"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:elevation="0dp"
+                        app:fabSize="mini"
+                        app:rippleColor="@android:color/white"
+                        app:srcCompat="@drawable/ic_call" />
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/fab_qty_add"
+                        android:layout_width="@dimen/spacing_xmlarge"
+                        android:layout_height="@dimen/spacing_xmlarge"
+                        android:clickable="true"
+                        android:tint="@android:color/white"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:elevation="0dp"
+                        app:fabSize="mini"
+                        app:rippleColor="@android:color/white"
+                        app:srcCompat="@drawable/ic_email" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.design.card.MaterialCardView>

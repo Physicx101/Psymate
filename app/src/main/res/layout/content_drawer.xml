@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/gradient"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/spacing_mlarge">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/spacing_mlarge"
+                        android:paddingRight="@dimen/spacing_mlarge"
+                        android:orientation="horizontal">
+
+                        <include layout="@layout/item_category"/>
+
+                        <include layout="@layout/item_category_unselected"/>
+
+                        <include layout="@layout/item_category_unselected"/>
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xlarge"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/spacing_middle"
+                    android:paddingLeft="@dimen/spacing_large"
+                    android:paddingRight="@dimen/spacing_large">
+
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/atur"
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginRight="@dimen/spacing_large"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_marginEnd="@dimen/spacing_middle"
+                            android:layout_marginRight="@dimen/spacing_middle"
+                            android:tint="@color/grey_40"
+                            app:srcCompat="@drawable/ic_menu_swap"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_rounded_medium"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/grey_40"
+                            android:text="Atur"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:visibility="visible"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imageA"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginEnd="@dimen/spacing_middle"
+                    android:layout_marginStart="@dimen/spacing_middle"
+                    android:background="@drawable/round_outline"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_3"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xxlarge"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/spacing_large"
+                    android:paddingRight="@dimen/spacing_large">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_rounded_bold"
+                        android:text="Seminar Psikologi"/>
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_marginEnd="@dimen/spacing_middle"
+                            android:layout_marginRight="@dimen/spacing_middle"
+                            android:tint="@color/colorPrimary"
+                            app:srcCompat="@drawable/ic_near_me"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_rounded_medium"
+                            android:gravity="center_vertical"
+                            android:text="1.8 km"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/spacing_large"
+                    android:paddingRight="@dimen/spacing_large">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_marginEnd="@dimen/spacing_middle"
+                            android:layout_marginRight="@dimen/spacing_middle"
+                            android:tint="@color/colorPrimary"
+                            app:srcCompat="@drawable/ic_calendar_blank"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_rounded_medium"
+                            android:gravity="center_vertical"
+                            android:text="7 Agustus 2018"/>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_large"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:visibility="visible"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageB"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginEnd="@dimen/spacing_middle"
+                        android:layout_marginStart="@dimen/spacing_middle"
+                        android:background="@drawable/round_outline"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image_3"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_xxlarge"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingRight="@dimen/spacing_large">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_rounded_bold"
+                            android:text="Kelas Mental Health"/>
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/spacing_mlarge"
+                                android:layout_height="@dimen/spacing_mlarge"
+                                android:layout_marginEnd="@dimen/spacing_middle"
+                                android:layout_marginRight="@dimen/spacing_middle"
+                                android:tint="@color/colorPrimary"
+                                app:srcCompat="@drawable/ic_near_me"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gotham_rounded_medium"
+                                android:gravity="center_vertical"
+                                android:text="2.8 km"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingRight="@dimen/spacing_large">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/spacing_mlarge"
+                                android:layout_height="@dimen/spacing_mlarge"
+                                android:layout_marginEnd="@dimen/spacing_middle"
+                                android:layout_marginRight="@dimen/spacing_middle"
+                                android:tint="@color/colorPrimary"
+                                app:srcCompat="@drawable/ic_calendar_blank"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gotham_rounded_medium"
+                                android:gravity="center_vertical"
+                                android:text="9 Agustus 2018"/>
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_large"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>
