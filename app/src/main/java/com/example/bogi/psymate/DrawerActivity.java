@@ -1,13 +1,16 @@
 package com.example.bogi.psymate;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -15,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -36,22 +40,25 @@ public class DrawerActivity extends AppCompatActivity
             window.setBackgroundDrawable(background);
         }
         setContentView(R.layout.activity_drawer);
-        ImageView imageA = findViewById(R.id.imageA);
-        ImageView imageB = findViewById(R.id.imageB);
-        imageA.setClipToOutline(true);
-        imageB.setClipToOutline(true);
 
-        LinearLayout atur = findViewById(R.id.atur);
-        atur.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DrawerActivity.this, MapsActivity.class));
-            }
-        });
+//        ImageView imageA = findViewById(R.id.imageA);
+//        ImageView imageB = findViewById(R.id.imageB);
+//        imageA.setClipToOutline(true);
+//        imageB.setClipToOutline(true);
 
+//        LinearLayout atur = findViewById(R.id.atur);
+//        atur.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(DrawerActivity.this, MapsActivity.class));
+//            }
+//        });
+        FragmentManager fm = getSupportFragmentManager();
+        fm.beginTransaction().replace(R.id.main_content, new HomeFragment()).commit();
         initToolbar();
         initNavigationMenu();
     }
+
 
     private void initToolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -73,7 +80,20 @@ public class DrawerActivity extends AppCompatActivity
         nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(final MenuItem item) {
-                Toast.makeText(getApplicationContext(), item.getTitle() + " Selected", Toast.LENGTH_SHORT).show();
+                int nav_id = item.getItemId();
+
+                FragmentManager fm = getSupportFragmentManager();
+
+                switch (nav_id) {
+                    case R.id.nav_beranda:
+                        fm.beginTransaction().replace(R.id.main_content, new HomeFragment()).commit();
+                        break;
+                    case R.id.nav_profil:
+                        fm.beginTransaction().replace(R.id.main_content, new ProfileFragment()).commit();
+                        break;
+
+                }
+
                 toolbar.setTitle(item.getTitle());
                 drawer.closeDrawers();
                 return true;
@@ -101,4 +121,6 @@ public class DrawerActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         return false;
     }
+
 }
+

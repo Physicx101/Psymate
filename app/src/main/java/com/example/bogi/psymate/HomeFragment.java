@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.bogi.psymate.model.Clinic;
 import com.example.bogi.psymate.adapter.AdapterClinic;
@@ -27,7 +28,7 @@ import java.util.List;
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener{
 
     private View parent_view;
 
@@ -60,7 +61,7 @@ public class HomeFragment extends Fragment {
         HomeFragment fragment = new HomeFragment();
         return fragment;
     }
-
+    ImageButton btLokasi,btEvent,btPerjanjian,btChatbot,btKomunitas,btArtikel;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,28 +76,40 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         // Inflate the layout for this fragment
+        btArtikel = view.findViewById(R.id.home_artikel);
+        btChatbot = view.findViewById(R.id.home_chatbot);
+        btEvent = view.findViewById(R.id.home_event);
+        btLokasi = view.findViewById(R.id.home_lokasi);
+        btPerjanjian = view.findViewById(R.id.home_perjanjian);
+        btKomunitas = view.findViewById(R.id.home_komunitas);
 
-        recyclerView = view.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(getContext()));
-        recyclerView.setHasFixedSize(true);
-
-        List<Clinic> items = DataGenerator.getClinicData(getContext());
-        items.addAll(DataGenerator.getClinicData(getContext()));
+        btArtikel.setOnClickListener(this);
+        btKomunitas.setOnClickListener(this);
+        btEvent.setOnClickListener(this);
+        btChatbot.setOnClickListener(this);
+        btPerjanjian.setOnClickListener(this);
+        btLokasi.setOnClickListener(this);
+//        recyclerView = view.findViewById(R.id.recyclerView);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+//        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(getContext()));
+//        recyclerView.setHasFixedSize(true);
+//
+//        List<Clinic> items = DataGenerator.getClinicData(getContext());
+//        items.addAll(DataGenerator.getClinicData(getContext()));
         //items.addAll(DataGenerator.getClinicData(getContext()));
 
         //set data and list adapter
-        mAdapter = new AdapterClinic(getContext(), items);
-        recyclerView.setAdapter(mAdapter);
+//        mAdapter = new AdapterClinic(getContext(), items);
+//        recyclerView.setAdapter(mAdapter);
 
         // on item list clicked
-        mAdapter.setOnItemClickListener(new AdapterClinic.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, Clinic obj, int position) {
-                Intent intent = new Intent(getContext(), ClinicActivity.class);
-                startActivity(intent);
-            }
-        });
+//        mAdapter.setOnItemClickListener(new AdapterClinic.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(View view, Clinic obj, int position) {
+//                Intent intent = new Intent(getContext(), ClinicActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         return view;
     }
 
@@ -115,12 +128,12 @@ public class HomeFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+//        if (context instanceof OnFragmentInteractionListener) {
+//            mListener = (OnFragmentInteractionListener) context;
+//        } else {
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnFragmentInteractionListener");
+//        }
     }
 
     @Override
@@ -142,5 +155,27 @@ public class HomeFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view == btArtikel){
+
+        }
+        if (view == btChatbot){
+
+        }
+        if (view == btEvent){
+
+        }
+        if (view == btKomunitas){
+
+        }
+        if (view == btLokasi){
+
+        }
+        if (view == btPerjanjian){
+
+        }
     }
 }

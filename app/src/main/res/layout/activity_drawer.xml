@@ -40,7 +40,7 @@
             android:layout_height="match_parent">
 
             <!-- dummy content list of new -->
-            <include layout="@layout/content_drawer" />
+            <!--<include layout="@layout/content_drawer" />-->
 
         </android.support.design.widget.CoordinatorLayout>
 

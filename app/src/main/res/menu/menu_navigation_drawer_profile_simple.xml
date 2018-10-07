@@ -4,26 +4,32 @@
         android:id="@+id/grp_1"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_activity"
-            android:title="Activity" />
+            android:id="@+id/nav_beranda"
+            android:title="Beranda" />
         <item
-            android:id="@+id/nav_explore"
-            android:title="Explore" />
+            android:id="@+id/nav_profil"
+            android:title="Profil" />
         <item
-            android:id="@+id/nav_photos"
-            android:title="Photos" />
+            android:id="@+id/nav_favorit"
+            android:title="Favorit" />
 
-        <item
-            android:id="@+id/nav_videos"
-            android:title="Videos" />
-
-        <item
-            android:id="@+id/nav_message"
-            android:title="Message" />
-
-        <item
-            android:id="@+id/nav_settings"
-            android:title="Settings" />
     </group>
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_tentang"
+            android:title="Tentang Kami" />
+
+
+        <item
+            android:id="@+id/nav_kebijakan"
+            android:title="Kebijakan Privasi" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Keluar"/>
+    </group>
+
 
 </menu>
